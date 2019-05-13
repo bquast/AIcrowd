@@ -166,7 +166,7 @@ For installation, prerequisites include localstack, postgresql and rvm. [Click h
 7. Run localstack using `localstack start` or `docker run -p 4572:4572 localstack/localstack`.
 8. Create a local directory for fog storage and modify application.yml `FOG_LOCAL_ROOT` to point to this directory.
 9. Run the webpack-dev-server using `./bin/webpack-dev-server`.
-10. Run `rake db:migrate` to migrate schema to our database then run `rake db:seed` to seed our database created using postgres.
+10. Log into the psql server again using `sudo -u postgres psql` and run `rake db:migrate` to migrate schema to our database then run `rake db:seed` to seed our database created using postgres. Then logout again (`Ctrl` + `d`).
 11. By default, start rails with `ENV=development rails server` from the Rails root and open http://localhost:3000 in a web browser.
 
 ### Bundle exec
